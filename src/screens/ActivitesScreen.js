@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const ActivitesScreen = props =>{
-    retur(
+  return(
         <View style={styles.screen}>
         <Text>Login Screen</Text>
       </View> 

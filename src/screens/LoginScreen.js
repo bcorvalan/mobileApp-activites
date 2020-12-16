@@ -1,10 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-const LoginScreen = props =>{
-    retur(
+const LoginScreen = (props) => {
+    return(
         <View style={styles.screen}>
-        <Text>Login Screen</Text>
+        <input
+        placeholder='Enter username'
+        value={username}
+        onChangeText={(text) => setUsername(text)}
+      />
+      <input
+        placeholder='Enter password'
+        secureTextEntry={true}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
+      />
+       <button
+        title='Sign In' 
+        //onPress={() => }
+      />
       </View> 
     );
 };
@@ -17,3 +31,4 @@ const styles = StyleSheet.create({
   });
 
   export default LoginScreen;
+
