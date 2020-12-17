@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+//Falta agregar {useSelector , useDispatch}
+
 const LoginScreen = (props) => {
     return(
         <View style={styles.screen}>
@@ -17,7 +19,7 @@ const LoginScreen = (props) => {
       />
        <button
         title='Sign In' 
-        //onPress={() => }
+        onPress={() => useDispatch(login({'username': username, 'password': password }))}  
       />
       </View> 
     );
