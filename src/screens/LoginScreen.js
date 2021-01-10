@@ -1,9 +1,10 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { StyleSheet, View } from 'react-native';
 
-//Falta agregar {useSelector , useDispatch}
 
-const LoginScreen = (props) => {
+const LoginScreen = () => {
+  useSelector(state => console.log(state))
     return(
         <View style={styles.screen}>
         <input
