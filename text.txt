@@ -1,0 +1,9 @@
+id Categoria 
+id SubCategoria
+
+Viernes 15- 
+
+Renderizado Emulador (codigo)
+Boceto de actividades (recortar - mandar a imprimir) 
+
+

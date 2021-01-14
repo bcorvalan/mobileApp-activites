@@ -1,39 +1,44 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, TextInput } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { Button, TextInput, Surface } from "react-native-paper";
+import { StyleSheet, View } from "react-native";
 
 const LoginScreen = () => {
-  const [username, setUsername]= useState('') 
-  const [password, setPassword]= useState('') 
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-  useSelector(state => console.log(state))
-    return(
-        <View style={styles.screen}>
-        <TextInput
-        placeholder='Enter username'
-        value= {username}
-        onChangeText={(text) => setUsername(text)}
+  return (
+    <View style = {styles.container}>
+      <TextInput style = {styles.textInput}
+        label="Usuario"
+        value={username}
+        onChangeText={(username) => setUsername(username)}
       />
-      <TextInput
-        placeholder='Enter password'
-        secureTextEntry={true}
+      <TextInput style = {styles.textInput}
+        label="Contraseña"
         value={password}
-        onChangeText={(text) => setPassword(text)}
+        onChangeText={(password) => setPassword(password)}
       />
-       <button
-        title='Sign In' 
-        onPress={() => useDispatch(login({'username': username, 'password': password }))}  
-      />
-      </View> 
-    );
+      <Button  style = {styles.submitButton}
+        mode="contained"
+        onPress={() => console.log("Pressed")}
+      >Press me
+      </Button>
+    </View>
+  );
 };
+
 const styles = StyleSheet.create({
-    screem: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center'
-    },
-  });
+  container:{
+    flex:1,
+    marginTop: '15%',
+    margin: '5%'
+  },
+  textInput:{
+    marginBottom: '5%'
+  }, 
+  submitButton:{ 
+    marginTop: '10%'
+  }
+})
 
-  export default LoginScreen;
-
+export default LoginScreen;
