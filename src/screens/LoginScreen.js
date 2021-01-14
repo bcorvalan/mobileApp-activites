@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { StyleSheet, View, TextInput } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
-import { StyleSheet, View } from 'react-native';
-
 
 const LoginScreen = () => {
+  const [username, setUsername]= useState('') 
+  const [password, setPassword]= useState('') 
+
   useSelector(state => console.log(state))
     return(
         <View style={styles.screen}>
-        <input
+        <TextInput
         placeholder='Enter username'
-        value={username}
+        value= {username}
         onChangeText={(text) => setUsername(text)}
       />
-      <input
+      <TextInput
         placeholder='Enter password'
         secureTextEntry={true}
         value={password}
