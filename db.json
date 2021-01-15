@@ -1,0 +1,44 @@
+{
+    "results": [
+        {
+            "name": "matemática",
+            "topics": [
+                "divison",
+                "suma",
+                "resta",
+                "multiplicación"
+            ],
+            "id": 1
+        },
+        {
+            "name": "física",
+            "topics": [
+                "divison",
+                "suma",
+                "resta",
+                "multiplicación"
+            ],
+            "id": 2
+        },
+        {
+            "name": "química",
+            "topics": [
+                "divison",
+                "suma",
+                "resta",
+                "multiplicación"
+            ],
+            "id": 3
+        },
+        {
+            "name": "literatura",
+            "topics": [
+                "divison",
+                "suma",
+                "resta",
+                "multiplicación"
+            ],
+            "id": 4
+        }
+    ]
+}

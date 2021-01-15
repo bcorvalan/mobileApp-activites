@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button, TextInput, Surface } from "react-native-paper";
+import { Button, TextInput} from "react-native-paper";
 import { StyleSheet, View } from "react-native";
 
-const LoginScreen = () => {
+const LoginScreen = props => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,7 +20,7 @@ const LoginScreen = () => {
       />
       <Button  style = {styles.submitButton}
         mode="contained"
-        onPress={() => console.log("Pressed")}
+        onPress={() => props.navigation.navigate({routeName:'HomeScreen'})}
       >Press me
       </Button>
     </View>
